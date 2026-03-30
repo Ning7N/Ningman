@@ -2,236 +2,206 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-<title>宁 ❤️ 曼 | 银渐层萌宠小家</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,sans-serif}
-body{background:#fef4f8;color:#443338;padding-bottom:200px;line-height:1.5}
-.header{background:#fff;padding:14px;text-align:center;font-weight:bold;color:#e87ea8;font-size:18px;box-shadow:0 1px 3px #fcdce6}
-.top-info{display:flex;justify-content:space-between;padding:10px 18px;background:#fff;margin:4px 0;font-size:14px;color:#666}
-.card{background:#fff;margin:16px;border-radius:16px;padding:16px;box-shadow:0 2px 8px #fde8f0}
-.card h3{color:#e87ea8;margin:0 0 12px 0;font-size:17px;display:flex;align-items:center;gap:6px}
-.pet-wrap{background:#fef8fb;border-radius:16px;text-align:center;padding:20px}
-.cat-main{font-size:100px;margin:12px 0;transition:transform 0.3s ease}
-.cat-main:active{transform:scale(1.1)}
-.pet-name-text{font-size:17px;font-weight:bold;color:#555;margin:6px 0}
-.pet-level{font-size:13px;color:#999;margin-bottom:8px}
-.cloth-tag{display:inline-block;background:#ffe8f2;color:#e87ea8;padding:4px 10px;border-radius:12px;font-size:12px;margin:8px 0}
-.bar-box{margin:10px 0;text-align:left}
-.bar-txt{font-size:13px;color:#777;margin:4px 0}
-.progress-bar{width:100%;height:12px;background:#f4f4f4;border-radius:8px;overflow:hidden}
-.fill-food{height:100%;background:#f8b6c2;border-radius:8px;transition:width 0.5s ease}
-.fill-happy{height:100%;background:#87d3b6;border-radius:8px;transition:width 0.5s ease}
-.pet-btn{background:#e87ea8;color:#fff;border:none;border-radius:22px;padding:7px 14px;margin:5px;font-size:13px;transition:0.2s}
-.pet-btn:active{opacity:0.9;transform:scale(0.97)}
-.chat-area{padding:16px;display:flex;flex-direction:column;gap:12px}
-.msg{max-width:75%;padding:11px 16px;border-radius:20px;line-height:1.5}
-.msg-ning{background:#e87ea8;color:#fff;align-self:flex-end;border-bottom-right-radius:6px}
-.msg-man{background:#fff;border:1px solid #f0dce3;align-self:flex-start;border-bottom-left-radius:6px}
-.msg-time{font-size:11px;opacity:0.7;margin-top:4px}
-.item-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #f7f7f7}
-.footer-input{position:fixed;left:0;right:0;bottom:0;background:#fff;padding:12px;border-top:1px solid #fcdce6;display:flex;gap:10px}
-.footer-input input{flex:1;border:1px solid #f0dce3;border-radius:24px;padding:0 18px;height:46px;outline:none;font-size:14px}
-.footer-input button{background:#e87ea8;color:#fff;border:none;border-radius:24px;padding:0 18px;font-size:14px}
-.board-item{background:#fef8fb;padding:12px;border-radius:12px;margin:8px 0}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+body {
+  background: #f8f0f4;
+  color: #333;
+  padding-bottom: 110px;
+}
+.header {
+  background: #fff;
+  padding: 16px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #e88aa7;
+}
+.top-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #fff;
+  font-size: 14px;
+  color: #777;
+}
+.card {
+  background: #fff;
+  margin: 16px;
+  border-radius: 16px;
+  padding: 20px;
+}
+.card h3 {
+  font-size: 16px;
+  color: #e88aa7;
+  margin-bottom: 12px;
+}
+.chat-area {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.msg {
+  max-width: 75%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: 14px;
+}
+.msg-ning {
+  background: #e88aa7;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 6px;
+}
+.msg-man {
+  background: white;
+  border: 1px solid #f0d8e0;
+  align-self: flex-start;
+  border-bottom-left-radius: 6px;
+}
+.msg-time {
+  font-size: 11px;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+.board-item {
+  background: #fff6f9;
+  padding: 14px;
+  border-radius: 12px;
+  margin: 10px 0;
+}
+.footer-input {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  padding: 12px;
+  border-top: 1px solid #f0d8e0;
+  display: flex;
+  gap: 10px;
+}
+.footer-input input {
+  flex: 1;
+  border: 1px solid #eee;
+  border-radius: 24px;
+  padding: 0 20px;
+  height: 44px;
+  font-size: 14px;
+}
+.footer-input button {
+  background: #e88aa7;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  padding: 0 20px;
+}
 </style>
 </head>
 <body>
-<div class="header">💖 宁 & 曼 · 银渐层萌宠小家 💖</div>
+<div class="header">Love</div>
 <div class="top-info">
   <div>爱心余额：<span id="loveNum">0</span></div>
   <div>甜蜜兑换：<span id="logNum">0</span> 次</div>
 </div>
-<div class="card">
-  <h3>🐾 我们的专属纯白银渐层</h3>
-  <div class="pet-wrap">
-    <div class="cat-main" id="catSkinShow">😺</div>
-    <div class="pet-name-text" id="petNameShow">小银团子</div>
-    <div class="pet-level">成长等级：Lv.<span id="petLvShow">1</span></div>
-    <div class="cloth-tag" id="clothShow">当前穿搭：原生纯白绒毛</div>
-    <div class="bar-box">
-      <div class="bar-txt">🍚 饱食度</div>
-      <div class="progress-bar"><div class="fill-food" id="foodBar" style="width:60%"></div></div>
-    </div>
-    <div class="bar-box">
-      <div class="bar-txt">💖 心情好感</div>
-      <div class="progress-bar"><div class="fill-happy" id="happyBar" style="width:70%"></div></div>
-    </div>
-    <div>
-      <button class="pet-btn" onclick="editPetName()">✏️ 自定义名字</button>
-      <button class="pet-btn" onclick="feedPet()">🍖 投喂小零食</button>
-    </div>
-    <div style="margin-top:6px">
-      <button class="pet-btn" onclick="strokePet()">😻 温柔摸摸头</button>
-      <button class="pet-btn" onclick="openClothShop()">👗 装扮换装屋</button>
-    </div>
-  </div>
-</div>
+
 <div class="chat-area" id="chatBox"></div>
+
 <div class="card">
-  <h3>🍬 爱心甜蜜兑换馆</h3>
-  <div class="item-row"><span>双人火锅大餐 🍲</span><button class="pet-btn" onclick="exchangeGift('双人火锅大餐',5)">5爱心</button></div>
-  <div class="item-row"><span>专属暖心抱抱 🤗</span><button class="pet-btn" onclick="exchangeGift('专属暖心抱抱',2)">2爱心</button></div>
-  <div class="item-row"><span>情侣电影约会 🎬</span><button class="pet-btn" onclick="exchangeGift('情侣电影约会',4)">4爱心</button></div>
-  <div class="item-row"><span>双人甜蜜奶茶 🧋</span><button class="pet-btn" onclick="exchangeGift('双人甜蜜奶茶',3)">3爱心</button></div>
-</div>
-<div class="card">
-  <h3>💌 双人悄悄话留言板</h3>
+  <h3>💌 悄悄话留言板</h3>
   <div id="boardBox"></div>
   <div style="display:flex;gap:10px;margin-top:12px">
-    <input id="boardInputTxt" placeholder="写下藏在心里的悄悄话…" style="flex:1;border:1px solid #eee;border-radius:22px;padding:0 14px;height:40px">
-    <button class="pet-btn" onclick="addLoveBoard()">发布留言</button>
+    <input id="boardInputTxt" placeholder="写下悄悄话..." style="flex:1;border:1px solid #eee;border-radius:22px;padding:0 14px;height:40px">
+    <button style="background:#e88aa7;color:white;border:none;border-radius:22px;padding:0 14px;height:40px" onclick="addLoveBoard()">留言</button>
   </div>
 </div>
+
 <div class="footer-input">
-  <input id="sendMsgInput" placeholder="发消息自动攒爱心，守护小猫成长✨">
+  <input id="sendMsgInput" placeholder="发消息自动攒爱心✨">
   <button onclick="sendLoveMsg()">发送</button>
 </div>
+
 <script>
 function getSaveData(){
-  let old = localStorage.getItem('ningManPetData')
+  let old = localStorage.getItem("loveChatData");
   if(!old){
     return {
-      love:8,log:0,msgList:[],boardList:[],
-      petName:"小银团子",petLv:1,petExp:0,
-      petSkin:"😺",petCloth:"原生纯白绒毛",
-      petFood:60,petHappy:70,lastUpdate:""
-    }
+      love: 0,
+      log: 0,
+      msgList: [],
+      boardList: []
+    };
   }
-  return JSON.parse(old)
+  return JSON.parse(old);
 }
 function setSaveData(obj){
-  localStorage.setItem('ningManPetData',JSON.stringify(obj))
+  localStorage.setItem("loveChatData", JSON.stringify(obj));
 }
-function autoPetDecay(){
-  let d = getSaveData()
-  let today = new Date().toISOString().split('T')[0]
-  if(d.lastUpdate !== today){
-    d.petFood = Math.max(20,d.petFood - 8)
-    d.petHappy = Math.max(20,d.petHappy - 6)
-    d.lastUpdate = today
-    setSaveData(d)
-  }
-}
-function editPetName(){
-  let d = getSaveData()
-  let newN = prompt('给纯白银渐层取专属名字：','')
-  if(!newN || newN.trim() === '')return
-  d.petName = newN.trim()
-  setSaveData(d)
-  refreshAllView()
-  alert('改名成功！'+d.petName+'永远陪着你们💖')
-}
-function feedPet(){
-  let d = getSaveData()
-  d.petFood = Math.min(100,d.petFood + 18)
-  d.petExp +=3
-  upPetLv(d)
-  setSaveData(d)
-  refreshAllView()
-  alert('投喂成功～小银渐层吃得肚子圆圆超可爱😻')
-}
-function strokePet(){
-  let d = getSaveData()
-  d.petHappy = Math.min(100,d.petHappy + 22)
-  d.petExp +=5
-  upPetLv(d)
-  setSaveData(d)
-  refreshAllView()
-  alert('摸摸头～小猫疯狂贴贴，好感暴涨✨')
-}
-function upPetLv(d){
-  if(d.petExp >= 20){d.petLv=2}
-  if(d.petExp >= 50){d.petLv=3}
-  if(d.petExp >= 100){d.petLv=4}
-}
-function openClothShop(){
-  let d = getSaveData()
-  if(d.love < 3){alert('爱心不够！多聊天攒爱心，给小猫买漂亮衣服～');return}
-  let clothList = [
-    {name:'粉色蝴蝶结公主裙',skin:'😻'},
-    {name:'浅蓝温柔小围巾',skin:'😹'},
-    {name:'奶白云朵小帽子',skin:'🙀'},
-    {name:'粉嫩爱心小围兜',skin:'😽'}
-  ]
-  let randomPick = clothList[Math.floor(Math.random()*clothList.length)]
-  d.love -=3
-  d.petCloth = randomPick.name
-  d.petSkin = randomPick.skin
-  setSaveData(d)
-  refreshAllView()
-  alert('换装完成！纯白银渐层穿上新衣，美到发光🌟')
-}
+
 function sendLoveMsg(){
-  let input = document.getElementById('sendMsgInput')
-  let txt = input.value.trim()
-  if(!txt)return
-  let d = getSaveData()
-  let who = confirm('这条消息是【宁】发送的吗？') ? 'ning' : 'man'
-  let h = new Date().getHours()
-  let m = String(new Date().getMinutes()).padStart(2,'0')
-  let timeStr = h+':'+m
-  d.love +=1
-  d.msgList.push({role:who,text:txt,time:timeStr})
-  setSaveData(d)
-  input.value = ''
-  refreshAllView()
+  let input = document.getElementById("sendMsgInput");
+  let txt = input.value.trim();
+  if(!txt) return;
+  let d = getSaveData();
+  let who = confirm("本条消息是【宁】发送的吗？") ? "ning" : "man";
+  let h = new Date().getHours();
+  let m = String(new Date().getMinutes()).padStart(2, "0");
+  let timeStr = h + ":" + m;
+
+  d.love += 1;
+  d.msgList.push({role: who, text: txt, time: timeStr});
+  setSaveData(d);
+  input.value = "";
+  refreshAllView();
 }
+
 function addLoveBoard(){
-  let input = document.getElementById('boardInputTxt')
-  let txt = input.value.trim()
-  if(!txt)return
-  let d = getSaveData()
-  let who = confirm('这条留言是【宁】写的吗？') ? '宁' : '曼'
-  let mon = new Date().getMonth()+1
-  let day = new Date().getDate()
-  let timeStr = mon+'月'+day+'日'
-  d.boardList.push({user:who,text:txt,time:timeStr})
-  setSaveData(d)
-  input.value = ''
-  refreshAllView()
+  let input = document.getElementById("boardInputTxt");
+  let txt = input.value.trim();
+  if(!txt) return;
+  let d = getSaveData();
+  let who = confirm("本条留言是【宁】写的吗？") ? "宁" : "曼";
+  let mon = new Date().getMonth() + 1;
+  let day = new Date().getDate();
+  let timeStr = mon + "月" + day + "日";
+
+  d.boardList.push({user: who, text: txt, time: timeStr});
+  setSaveData(d);
+  input.value = "";
+  refreshAllView();
 }
-function exchangeGift(name,cost){
-  let d = getSaveData()
-  if(d.love < cost){alert('爱心不足～和对方多聊天，攒甜蜜爱心❤️');return}
-  d.love -= cost
-  d.log +=1
-  let h = new Date().getHours()
-  let m = String(new Date().getMinutes()).padStart(2,'0')
-  d.msgList.push({role:'sys',text:'成功兑换：'+name,time:h+':'+m})
-  setSaveData(d)
-  refreshAllView()
-  alert('兑换成功！属于你们的甜蜜又多一份💖')
-}
+
 function refreshAllView(){
-  autoPetDecay()
-  let d = getSaveData()
-  document.getElementById('loveNum').innerText = d.love
-  document.getElementById('logNum').innerText = d.log
-  document.getElementById('petNameShow').innerText = d.petName
-  document.getElementById('petLvShow').innerText = d.petLv
-  document.getElementById('clothShow').innerText = '当前穿搭：'+d.petCloth
-  document.getElementById('catSkinShow').innerText = d.petSkin
-  document.getElementById('foodBar').style.width = d.petFood+'%'
-  document.getElementById('happyBar').style.width = d.petHappy+'%'
-  let chatHtml = ''
-  d.msgList.forEach(item=>{
-    if(item.role === 'ning'){
-      chatHtml += `<div class="msg msg-ning">${item.text}<div class="msg-time">${item.time}</div></div>`
-    } else if(item.role === 'man'){
-      chatHtml += `<div class="msg msg-man">${item.text}<div class="msg-time">${item.time}</div></div>`
+  let d = getSaveData();
+  document.getElementById("loveNum").innerText = d.love;
+  document.getElementById("logNum").innerText = d.log;
+
+  let chatHtml = "";
+  d.msgList.forEach(item => {
+    if(item.role === "ning"){
+      chatHtml += `<div class="msg msg-ning">${item.text}<div class="msg-time">${item.time}</div></div>`;
     } else {
-      chatHtml += `<div class="msg msg-man" style="background:#fff4f7;color:#e87ea8;border:0">${item.text}<div class="msg-time">${item.time}</div></div>`
+      chatHtml += `<div class="msg msg-man">${item.text}<div class="msg-time">${item.time}</div></div>`;
     }
-  })
-  document.getElementById('chatBox').innerHTML = chatHtml
-  let boardHtml = ''
-  d.boardList.forEach(item=>{
-    boardHtml += `<div class="board-item"><div style="font-size:14px">${item.text}</div><div style="font-size:11px;color:#999;margin-top:4px">${item.user} · ${item.time}</div></div>`
-  })
-  document.getElementById('boardBox').innerHTML = boardHtml
+  });
+  document.getElementById("chatBox").innerHTML = chatHtml;
+
+  let boardHtml = "";
+  d.boardList.forEach(item => {
+    boardHtml += `<div class="board-item"><div style="font-size:14px">${item.text}</div><div style="font-size:11px;color:#999;margin-top:4px">${item.user} · ${item.time}</div></div>`;
+  });
+  document.getElementById("boardBox").innerHTML = boardHtml;
 }
-refreshAllView()
+
+refreshAllView();
 </script>
 </body>
 </html>
