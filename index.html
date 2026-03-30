@@ -1,0 +1,131 @@
+!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>宁 ❤️ 曼 | 我们的小世界</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,sans-serif}
+body{background:#fce4ec;color:#333;padding-bottom:120px}
+.header{background:#fff;padding:12px;text-align:center;font-weight:bold;color:#f06292}
+.love-info{display:flex;justify-content:space-between;padding:8px 16px;background:#fff;margin-top:2px;font-size:14px}
+.chat{padding:16px;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:75%;padding:10px 14px;border-radius:18px;line-height:1.4}
+.ning{align-self:flex-end;background:#f06292;color:white}
+.man{align-self:flex-start;background:white;color:#333}
+.time{font-size:11px;margin-top:4px;opacity:0.7}
+
+.shop{background:#fff;margin:16px;padding:12px;border-radius:12px}
+.shop h3{color:#f06292;margin-bottom:8px;font-size:16px}
+.item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f4f4f4}
+.item button{background:#f06292;color:white;border:none;padding:4px 10px;border-radius:12px;font-size:12px}
+
+.input-box{position:fixed;bottom:0;left:0;right:0;background:#fff;padding:10px;display:flex;gap:8px}
+input{flex:1;border:1px solid #eee;border-radius:24px;padding:0 16px;outline:none;height:44px}
+button{background:#f06292;color:white;border:none;border-radius:24px;padding:0 16px}
+.btns{display:flex;gap:8px;margin-top:4px}
+
+</head>
+<body>
+
+<div class="header">宁 ❤️ 曼 · 我们的小世界</div>
+<div class="love-info">
+  <div>当前爱心：<span id="love">0</span></div>
+  <div>已兑换：<span id="log">0</span> 次</div>
+</div>
+
+<div class="chat" id="chat"></div>
+
+<div class="shop">
+  <h3>🍕 爱心兑换菜品</h3>
+  <div class="item">
+    <span>一顿火锅 🍲</span>
+    <button onclick="buy('一顿火锅',5)">5爱心</button>
+  </div>
+  <div class="item">
+    <span>一顿烧烤 🍢</span>
+    <button onclick="buy('一顿烧烤',4)">4爱心</button>
+  </div>
+  <div class="item">
+    <span>一顿西餐 🥩</span>
+    <button onclick="buy('一顿西餐',6)">6爱心</button>
+  </div>
+  <div class="item">
+    <span>奶茶一杯 🧋</span>
+    <button onclick="buy('奶茶一杯',2)">2爱心</button>
+  </div>
+</div>
+
+<div class="input-box">
+  <input id="msg" placeholder="说点什么…" />
+  <div style="display:flex;flex-direction:column;gap:6px">
+    <button onclick="send()">发送</button>
+    <button onclick="addLove()">+1爱心</button>
+  </div>
+</div>
+
+<script>
+function getData(){
+  return JSON.parse(localStorage.getItem('ningmanData')||'{"love":0,"log":0,"msg":[]}')
+}
+function save(d){localStorage.setItem('ningmanData',JSON.stringify(d))}
+
+function load(){
+  let d=getData()
+  document.getElementById('love').innerText=d.love
+  document.getElementById('log').innerText=d.log
+  let chat=document.getElementById('chat')
+  chat.innerHTML=''
+  d.msg.forEach(m=>{
+    let div=document.createElement('div')
+    div.className='msg '+m.from
+    div.innerHTML=m.text+'<div class="time">'+m.time+'</div>'
+    chat.appendChild(div)
+  })
+  window.scrollTo(0,document.body.scrollHeight)
+}
+
+function send(){
+  let i=document.getElementById('msg')
+  let t=i.value.trim()
+  if(!t)return
+  let now=new Date()
+  let time=now.getHours()+':'+String(now.getMinutes()).padStart(2,'0')
+  let from=confirm('发送人：宁 确定？')?'ning':'man'
+  let d=getData()
+  d.msg.push({from,text:t,time})
+  save(d)
+  i.value=''
+  load()
+}
+
+function addLove(){
+  let d=getData()
+  d.love++
+  save(d)
+  load()
+}
+
+function buy(name,cost){
+  let d=getData()
+  if(d.love>=cost){
+    d.love-=cost
+    d.log++
+    let now=new Date()
+    let time=now.getHours()+':'+String(now.getMinutes()).padStart(2,'0')
+    d.msg.push({from:'man',text:'兑换了'+name,time})
+    save(d)
+    load()
+    alert('兑换成功！')
+  }else{
+    alert('爱心不足哦~')
+  }
+}
+
+load()
+</script>
+
+</body>
+</html>
+    ```
