@@ -14,7 +14,7 @@ body{background:#f8f0f4;color:#333;padding-bottom:120px}
 .login-box h2{color:#e88aa7;margin-bottom:20px}
 .login-box input{width:100%;padding:12px;border:1px solid #eee;border-radius:12px;margin:10px 0}
 .login-box button{background:#e88aa7;color:#fff;border:none;border-radius:12px;padding:12px 30px}
-.tip{font-size:12px;color:#999;margin-top:15px}
+.tip{font-size:12px;color:#999;margin-top:15px;display:none;}
 .hide{display:none !important}
 
 /*顶部*/
@@ -45,7 +45,7 @@ body{background:#f8f0f4;color:#333;padding-bottom:120px}
     <h2>Love 双人聊天</h2>
     <input type="password" id="pwd" placeholder="输入专属密码">
     <button onclick="login()">进入聊天</button>
-    <div class="tip">宁：n123 &nbsp; 曼：m123</div>
+    <div class="tip">宁：1124 &nbsp; 曼：1118</div>
   </div>
 </div>
 
@@ -81,15 +81,15 @@ function set(d){
   localStorage.setItem("loveChatData",JSON.stringify(d));
 }
 
-//登录
+//登录（已改密码）
 function login(){
   let p = document.getElementById("pwd").value.trim();
-  if(p==="n123")user="宁";
-  else if(p==="m123")user="曼";
-  else return alert("密码错了");
+  if(p==="1124")user="宁";
+  else if(p==="1118")user="曼";
+  else return alert("密码错误");
   document.getElementById("loginPage").classList.add("hide");
   document.getElementById("main").classList.remove("hide");
-  document.getElementById("who").innerText=user+"专属聊天";
+  document.getElementById("who").innerText=user+"的聊天";
   render();
 }
 function logout(){
